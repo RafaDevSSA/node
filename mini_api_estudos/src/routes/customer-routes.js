@@ -8,5 +8,6 @@ const jsonParser = bodyParser.json()
 var router = express.Router()
 
 router.post('/', jsonParser, controller.post);
+router.post('/authenticate', jsonParser, controller.authenticate);
 
 module.exports = router; 

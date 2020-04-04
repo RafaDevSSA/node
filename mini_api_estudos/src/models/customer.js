@@ -9,18 +9,25 @@ const schema = new Schema({
         type: String,
         required: true,
     },
-    
+
     email: {
         type: String,
         required: true,
-        trim: true
+        trim: true,
+        unique: [true, 'Já existe uma conta usando este email!'],
     },
 
     password: {
         type: String,
         required: true,
         trim: true
+    },
+    roles: {
+        type: String,
+        enum: ['user', 'admin'],
+        default: 'user',
+        required: true
     }
 });
 
-module.exports = mongoose.model('Customer',schema);
+module.exports = mongoose.model('Customer', schema);
