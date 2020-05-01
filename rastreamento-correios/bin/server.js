@@ -1,6 +1,6 @@
 'use strict'
 
-const app = require('../src/index');
+const app = require('../index');
 
 const port = normalizePort(process.env.PORT || 3000);
 

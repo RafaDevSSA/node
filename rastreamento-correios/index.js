@@ -3,9 +3,9 @@ const express = require('express');
 const app = express();
 
 //rotas
-const rastrearRoute = require('./routers/rastrear-route');
+const rastrearRoute = require('./src/routers/rastrear-route');
 
 app.use('/',rastrearRoute);
 
-module.exports = app;
+//module.exports = app;
 
