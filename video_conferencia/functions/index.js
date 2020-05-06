@@ -40,38 +40,6 @@ exports.email = functions.https.onRequest((req, res) => {
                 res.status(500).send(err.toString());
             }
         })();
-
-
-
-        /*var transporter = nodemailer.createTransport({
-            service: 'smtp.sendgrid.net',
-            port: 465,
-            auth: {
-                user: 'apikey',
-                pass: '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'
-            }
-        });
-
-        var remetente = req.body.remetente;
-        var assunto = req.body['assunto'];
-        var destinatarios = req.body['destinatarios']; // lista de e-mails destinatarios separados por ,
-        var corpo = req.body['corpo'];
-        var corpoHtml = req.body['corpoHtml'];
-
-        var email = {
-            from: remetente,
-            to: destinatarios,
-            subject: assunto,
-            text: corpo,
-            html: corpoHtml
-        };
-
-        transporter.sendMail(email, (error, info) => {
-            if (error) {
-                res.status(500).send(error);
-            }
-            res.status(201).send('Mensagem %s enviada: %s', info.messageId, info.response);
-        });*/
     });
 });
 
